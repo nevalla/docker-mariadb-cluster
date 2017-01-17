@@ -3,7 +3,6 @@ version: 0.1.0
 description: Docker MariaDB cluster
 services:
   db:
-    build: .
     image: nevalla/docker-mariadb-cluster:latest
     environment:
       - DB_SERVICE_NAME=db
