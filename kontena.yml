@@ -1,0 +1,13 @@
+stack: nevalla/mariadb-cluster
+version: 0.1.0
+description: Docker MariaDB cluster
+services:
+  db:
+    build: .
+    image: nevalla/docker-mariadb-cluster:latest
+    environment:
+      - DB_SERVICE_NAME=db
+    stateful: true
+    deploy:
+      wait_for_port: 3306
+    instances: 3
